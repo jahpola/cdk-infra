@@ -22,7 +22,11 @@ setuptools.setup(
         "aws-cdk.core==1.67.0",
         "aws-cdk.aws-ec2==1.67.0",
         "aws-cdk.aws-rds==1.67.0",
-        "aws-cdk.aws-ssm==1.67.0"
+        "aws-cdk.aws-ssm==1.67.0",
+        "aws-cdk.aws_codepipeline==1.67.0",
+        "aws-cdk.aws-codepipeline-actions==1.67.0",
+        "aws-cdk.pipelines=1.67.0",
+        "aws-cdk.aws-secretsmanager==1.67.0"
     ],
 
     python_requires=">=3.6",
