@@ -6,20 +6,23 @@ with open("README.md") as fp:
 
 
 setuptools.setup(
-    name="futucloud_jahp",
+    name="cdk infra",
     version="0.0.1",
 
-    description="An empty CDK Python app",
+    description="CDK infra",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    author="author",
+    author="Jyrki Ahpola",
 
-    package_dir={"": "futucloud_jahp"},
-    packages=setuptools.find_packages(where="futucloud_jahp"),
+    package_dir={"": "stacks"},
+    packages=setuptools.find_packages(where="stacks"),
 
     install_requires=[
-        "aws-cdk.core==1.65.0",
+        "aws-cdk.core==1.67.0",
+        "aws-cdk.aws-ec2==1.67.0",
+        "aws-cdk.aws-rds==1.67.0",
+        "aws-cdk.aws-ssm==1.67.0"
     ],
 
     python_requires=">=3.6",
