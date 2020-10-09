@@ -9,7 +9,7 @@ from stacks.pipeline import PipelineStack
 
 app = core.App()
 
-PipelineStack(app, 'PipelineStack',)
+PipelineStack(app, 'PipelineStack')
 
 #VPC = VPCStack(app, "VPC")
 #Infra = InfraStack(app, "infra")

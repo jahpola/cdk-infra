@@ -3,8 +3,7 @@ from aws_cdk import aws_codepipeline as codepipeline
 from aws_cdk import aws_codepipeline_actions as cpactions
 from aws_cdk import pipelines
 
-from db import DBStack
-from vpc import VPCStack
+from infrastage import InfraStage
 
 class PipelineStack(core.Stack):
   def __init__(self, scope: core.Construct, id: str, **kwargs):
@@ -34,8 +33,8 @@ class PipelineStack(core.Stack):
             synth_command='cdk synth'
         ))
 
-    vpc_app =  VPCStack(self, "VPC")
-    vpc_app_stage = pipeline.add_application_stage(vpc_app)
+    infra =  InfraStage(self, "VPC")
+    infra_stage = pipeline.add_application_stage(infra)
 
 
 
