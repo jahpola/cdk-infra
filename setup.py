@@ -26,7 +26,8 @@ setuptools.setup(
         "aws-cdk.aws_codepipeline==1.67.0",
         "aws-cdk.aws-codepipeline-actions==1.67.0",
         "aws-cdk.pipelines==1.67.0",
-        "aws-cdk.aws-secretsmanager==1.67.0"
+        "aws-cdk.aws-secretsmanager==1.67.0",
+        "aws-cdk.aws-dynamodb==1.67.0"
     ],
 
     python_requires=">=3.6",
