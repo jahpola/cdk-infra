@@ -35,7 +35,7 @@ class PipelineStack(core.Stack):
         ))
     
     network = NetworkStage(self, "VPC")
-    infra =  InfraStage(self, "Infra")
+    infra =  InfraStage(self, "Dev")
 
     network_stage = pipeline.add_application_stage(network)
     infra_stage = pipeline.add_application_stage(infra)
