@@ -1,9 +1,10 @@
 from aws_cdk import core
 
-from infra import InfraStack
+from vpc import VPCStack
 
-class InfraStage(core.Stage):
+class NetworkStage(core.Stage):
     def __init__(self, scope: core.Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
 
-        Infra = InfraStack(self, "Infra")
+        VPC = VPCStack(self, "VPC")
+

@@ -3,6 +3,7 @@ from aws_cdk import aws_codepipeline as codepipeline
 from aws_cdk import aws_codepipeline_actions as cpactions
 from aws_cdk import pipelines
 
+from networkstage import NetworkStage
 from infrastage import InfraStage
 
 class PipelineStack(core.Stack):
@@ -32,8 +33,11 @@ class PipelineStack(core.Stack):
             build_command='pwd',
             synth_command='cdk synth'
         ))
+    
+    network = NetworkStage(self, "VPC")
+    infra =  InfraStage(self, "Infra")
 
-    infra =  InfraStage(self, "VPC")
+    network_stage = pipeline.add_application_stage(network)
     infra_stage = pipeline.add_application_stage(infra)
 
 
