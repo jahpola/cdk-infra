@@ -34,7 +34,7 @@ class PipelineStack(core.Stack):
             synth_command='cdk synth'
         ))
     
-    network = NetworkStage(self, "VPC")
+    network = NetworkStage(self, "Network")
     infra =  InfraStage(self, "Dev")
 
     network_stage = pipeline.add_application_stage(network)
