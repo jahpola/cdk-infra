@@ -8,5 +8,6 @@ class DBStack(core.Stack):
         # The code that defines your stack goes here
 
         testi = dynamodb.Table(self, "Testi",
-            partition_key=Attribute(name="id", type=dynamodb.AttributeType.STRING)
+            partition_key=dynamodb.Attribute(name="id", type=dynamodb.AttributeType.STRING)
         )
+        
