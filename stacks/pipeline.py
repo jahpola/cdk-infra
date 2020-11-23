@@ -3,8 +3,8 @@ from aws_cdk import aws_codepipeline as codepipeline
 from aws_cdk import aws_codepipeline_actions as cpactions
 from aws_cdk import pipelines
 
-from networkstage import NetworkStage
-from infrastage import InfraStage
+from .networkstage import NetworkStage
+from .infrastage import InfraStage
 
 class PipelineStack(core.Stack):
   def __init__(self, scope: core.Construct, id: str, **kwargs):

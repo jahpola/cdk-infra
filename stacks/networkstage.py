@@ -1,6 +1,6 @@
 from aws_cdk import core
 
-from vpc import VPCStack
+from .vpc import VPCStack
 
 class NetworkStage(core.Stage):
     def __init__(self, scope: core.Construct, id: str, **kwargs):
