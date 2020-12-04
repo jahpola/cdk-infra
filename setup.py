@@ -19,15 +19,15 @@ setuptools.setup(
     packages=setuptools.find_packages(where="stacks"),
 
     install_requires=[
-        "aws-cdk.core==1.74.0",
-        "aws-cdk.aws-ec2==1.74.0",
-        "aws-cdk.aws-rds==1.74.0",
-        "aws-cdk.aws-ssm==1.74.0",
-        "aws-cdk.aws_codepipeline==1.74.0",
-        "aws-cdk.aws-codepipeline-actions==1.74.0",
-        "aws-cdk.pipelines==1.74.0",
-        "aws-cdk.aws-secretsmanager==1.74.0",
-        "aws-cdk.aws-dynamodb==1.74.0"
+        "aws-cdk.core==1.76.0",
+        "aws-cdk.aws-ec2==1.76.0",
+        "aws-cdk.aws-rds==1.76.0",
+        "aws-cdk.aws-ssm==1.76.0",
+        "aws-cdk.aws_codepipeline==1.76.0",
+        "aws-cdk.aws-codepipeline-actions==1.76.0",
+        "aws-cdk.pipelines==1.76.0",
+        "aws-cdk.aws-secretsmanager==1.76.0",
+        "aws-cdk.aws-dynamodb==1.76.0"
     ],
 
     python_requires=">=3.6",
