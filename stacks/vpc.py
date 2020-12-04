@@ -1,6 +1,7 @@
 from os import name
 from aws_cdk import core
 import aws_cdk.aws_ec2 as ec2
+import aws_cdk.aws_route53 as route53
 from aws_cdk.aws_ec2 import GatewayVpcEndpointOptions
 
 
@@ -10,6 +11,7 @@ class VPCStack(core.Stack):
         super().__init__(scope, id, **kwargs)
 
         # The code that defines your stack goes here
+
         self.vpc = ec2.Vpc(self, "Playground",
             max_azs=3,
             nat_gateways=1,
@@ -33,6 +35,10 @@ class VPCStack(core.Stack):
             )
             ]
 
+        )
+
+        route53.PublicHostedZone(self, "PublicZone",
+            zone_name="playground.futucloud.com"
         )
 
         core.CfnOutput(self, "Output",
