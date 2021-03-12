@@ -7,5 +7,5 @@ class InfraStage(core.Stage):
     def __init__(self, scope: core.Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
 
-        Infra = InfraStack(self, "Infra")
+        #Infra = InfraStack(self, "Infra")
         DB = DBStack(self, "Database")
